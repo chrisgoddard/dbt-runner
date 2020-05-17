@@ -1,0 +1,27 @@
+
+version: 1
+
+project_id: xxx
+
+pubsub_config:
+  instance_control_topic: xxx
+  dbt_job_topic: xxx
+
+slack_notifications:
+  build_notifications_webhook: https://hooks.slack.com/services/...
+
+timezone: US/Eastern
+
+jobs:
+  - name: daily full run
+    run_only: true
+    schedule: 5
+    models: <all>
+  - name: hourly updates
+    schedule: <hourly>
+    models: tag:hourly+
+  - name: target builds
+    schedule: [5, 18]
+    models: +tag:targets+
+
+# chain_instance:
