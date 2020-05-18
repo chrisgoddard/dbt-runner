@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import logging
+import json
+import requests
 from pprint import pformat
 from google.cloud import pubsub
 
-import requests
 
 logging.basicConfig(level=logging.INFO)
 
