@@ -67,6 +67,7 @@ def main():
 
     runner.run_jobs()
 
+    pubsubint.shutdown_self()
 
 
 if __name__ == "__main__":
