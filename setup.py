@@ -12,7 +12,7 @@ setup(
     py_modules=["dbt_run"],
     install_requires=[
         "google-cloud-bigquery>=1.20.0",
-        "pyyaml==5.1.2",
+        "pyyaml==5.4",
         "google-cloud-pubsub==1.4.3",
         "dbt==0.16.1",
         "google-cloud-storage==1.28.1"
